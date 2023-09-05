@@ -5,8 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import javax.sound.midi.Soundbank;
-
 public class AtsvaituNesiojimasTest extends BaseTest {
     @BeforeMethod
     @Override
@@ -15,7 +13,7 @@ public class AtsvaituNesiojimasTest extends BaseTest {
     }
 
     @Test
-    public void testAtsvaituNesiojimasQuestionnairePositive() {
+    public void testAtsvaituNesiojimasPollPositive() {
         String amzius = "34";
         boolean isActive;
         String expectedResult = "Dėkojame už atsakymą!";
@@ -41,7 +39,7 @@ public class AtsvaituNesiojimasTest extends BaseTest {
     }
 
     @Test
-    public void testAtsvaituNesiojimasQuestionnaireNegative() {
+    public void testAtsvaituNesiojimasPollNegative() {
         String amzius = "34";
         boolean isActive;
         String expectedResult = "Rastos klaidos";

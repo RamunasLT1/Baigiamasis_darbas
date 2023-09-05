@@ -85,6 +85,7 @@ public class Common {
         Select select = new Select(element);
         select.selectByValue(selectValue);
     }
+
     public static void selectOptionByVisibleText(By locator, String selectValue) {
         WebElement element = getElement(locator);
         Select select = new Select(element);
@@ -98,3 +99,4 @@ public class Common {
     public static String getTextFromAlert() {
         return getAlert().getText();
     }
+}
