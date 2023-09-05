@@ -11,21 +11,21 @@ public class SignInPage {
 
     public static void writeEmail(String email) {
         Common.sendKeysToElement(
-                Locators.apklausaLt.SignIn.inputEmail,
+                Locators.ApklausaLt.SignIn.inputEmail,
                 email
         );
     }
 
     public static void writePswd(String password) {
         Common.sendKeysToElement(
-                Locators.apklausaLt.SignIn.inputPswd,
+                Locators.ApklausaLt.SignIn.inputPswd,
                 password
         );
 
     }
 
     public static void clickOnButtonPrisijungti() {
-        Common.clickOnElement(Locators.apklausaLt.SignIn.buttonPrisijungti);
+        Common.clickOnElement(Locators.ApklausaLt.SignIn.buttonPrisijungti);
     }
 }
 

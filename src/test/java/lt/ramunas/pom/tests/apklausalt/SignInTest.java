@@ -17,17 +17,49 @@ public class SignInTest extends BaseTest {
     }
 
     @Test
-    public void testSignInFunction(){
+    public void testSignInPositive() {
         String eMail = "qwarez@inbox.lt";
         String password = "a8P4k3L5a8u6S4a1";
         String expectedResult = "Prisijungėte sėkmingai.";
         String actualResult;
 
-       SignInPage.writeEmail(eMail);
-       SignInPage.writePswd(password);
-       SignInPage.clickOnButtonPrisijungti();
+        SignInPage.writeEmail(eMail);
+        SignInPage.writePswd(password);
+        SignInPage.clickOnButtonPrisijungti();
 
-       actualResult = Common.getTextFromElement(Locators.apklausaLt.SignIn.readSignInMessage);
+        actualResult = Common.getTextFromElement(Locators.ApklausaLt.SignIn.readSignInMessage);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testSignInNegativePaswd() {
+        String eMail = "qwarez@inbox.lt";
+        String password = "a8P4k3L5a8u6S4a";
+        String expectedResult = "Neteisingas el. paštas arba slaptažodis.";
+        String actualResult;
+
+        SignInPage.writeEmail(eMail);
+        SignInPage.writePswd(password);
+        SignInPage.clickOnButtonPrisijungti();
+
+        actualResult = Common.getTextFromElement(Locators.ApklausaLt.SignIn.readErrorMessage);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testSignInNegativeEmail() {
+        String eMail = "qwz@inbox.lt";
+        String password = "a8P4k3L5a8u6S4a1";
+        String expectedResult = "Invalid El. paštas or password.";
+        String actualResult;
+
+        SignInPage.writeEmail(eMail);
+        SignInPage.writePswd(password);
+        SignInPage.clickOnButtonPrisijungti();
+
+        actualResult = Common.getTextFromElement(Locators.ApklausaLt.SignIn.readErrorMessage);
 
         Assert.assertEquals(actualResult, expectedResult);
     }
