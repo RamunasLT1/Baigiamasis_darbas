@@ -17,7 +17,7 @@ public class Driver {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        options.addArguments("--force-device-scale-factor=0.75");
+        options.addArguments("--force-device-scale-factor=0.80");
 //        options.addArguments("--headless=new");
 
         webDriver = new ChromeDriver(options);
@@ -29,7 +29,7 @@ public class Driver {
     }
 
     public static void quitWebDriver() {
+        webDriver.close();
         webDriver.quit();
-
     }
 }
