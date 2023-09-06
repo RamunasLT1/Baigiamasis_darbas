@@ -36,7 +36,7 @@ public class AtsvaituNesiojimasTest extends BaseTest {
                         expectedResult
                 )
         );
-        System.out.println("Galima įrašyti priežastį kodėl ? " + (isPriezastisKodelActive ? "TAIP" : "NE"));
+        System.out.println("Galima įrašyti priežastį kodėl ? " + (isPriezastisKodelActive? "TAIP" : "NE"));
     }
 
     @Test
@@ -48,9 +48,8 @@ public class AtsvaituNesiojimasTest extends BaseTest {
         AtsvaituNesiojimasPage.clickOnVyrasCheckBox();
         AtsvaituNesiojimasPage.inputAgeValue(amzius);
         AtsvaituNesiojimasPage.clickOnSiustiAtsakyma();
-        AtsvaituNesiojimasPage.isErrorBoxPresent();
 
-        actualResult = AtsvaituNesiojimasPage.isErrorBoxPresent();
+        actualResult = AtsvaituNesiojimasPage.isErrorPresent();
 
         if (actualResult) {
             AtsvaituNesiojimasPage.readErrorMesage();

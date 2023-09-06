@@ -33,18 +33,21 @@ public class AtsvaituNesiojimasPage {
     }
 
     public static void clickOnSiustiAtsakyma() {
-        Common.clickOnElement(Locators.ApklausaLt.AtsvaituNesiojimas.clickOnSiustiAtsakyma);
+        Common.clickOnElement(Locators.ApklausaLt.AtsvaituNesiojimas.buttonSiustiAtsakyma);
     }
 
 
-    public static boolean isErrorBoxPresent() {
+    public static boolean isErrorPresent() {
         return Common.waitForElementToBeVisibleCustomised(
-                Locators.ApklausaLt.AtsvaituNesiojimas.errorVisibleAfter,
+                Locators.ApklausaLt.AtsvaituNesiojimas.errorMessage,
                 3
         );
     }
 
     public static void readErrorMesage() {
-        Common.getTextFromElement(Locators.ApklausaLt.AtsvaituNesiojimas.readErrorMessage);
+        Common.getTextFromElement(Locators.ApklausaLt.AtsvaituNesiojimas.errorMessage);
     }
+
+
+
 }

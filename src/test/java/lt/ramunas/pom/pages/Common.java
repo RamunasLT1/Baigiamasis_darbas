@@ -55,10 +55,6 @@ public class Common {
         return getElement(locator).isSelected();
     }
 
-    public static boolean isElementDisabled(By locator) {
-        return getElement(locator).isEnabled();
-    }
-
     public static boolean isElementEnabled(By locator) {
         return getElement(locator).isEnabled();
     }
@@ -66,6 +62,7 @@ public class Common {
     public static boolean isElementVisible(By locator) {
         return getElement(locator).isDisplayed();
     }
+
     public static boolean waitForElementToBeVisibleCustomised(By locator, int seconds) {
 
         for (int i = 1; i <= (seconds); i++) {
@@ -84,14 +81,6 @@ public class Common {
         return false;
     }
 
-    public static List<Boolean> getSelectedStatusesOfCheckBoxGroup(By locator) {
-        List<Boolean> statusList = new ArrayList<>();
-
-        for (WebElement element : getElements(locator)) {
-            statusList.add(element.isSelected());
-        }
-        return statusList;
-    }
 
     public static String getElementAttributeValue(By locator, String attributeName) {
         return getElement(locator).getAttribute(attributeName);
