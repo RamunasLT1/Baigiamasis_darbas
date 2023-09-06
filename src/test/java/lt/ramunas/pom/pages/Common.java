@@ -30,6 +30,10 @@ public class Common {
         return Driver.getInstance().switchTo().alert();
     }
 
+    public static void dismissAlert() {
+        getAlert().dismiss();
+    }
+
 
     public static WebElement getElement(By locator) {
         return Driver.getInstance().findElement(locator);
@@ -81,7 +85,6 @@ public class Common {
         return false;
     }
 
-
     public static String getElementAttributeValue(By locator, String attributeName) {
         return getElement(locator).getAttribute(attributeName);
     }
@@ -92,17 +95,9 @@ public class Common {
         select.selectByValue(selectValue);
     }
 
-    public static void selectOptionByVisibleText(By locator, String selectValue) {
-        WebElement element = getElement(locator);
-        Select select = new Select(element);
-        select.selectByVisibleText(selectValue);
-    }
 
     public static void accpetAlert() {
         getAlert().accept();
     }
 
-    public static String getTextFromAlert() {
-        return getAlert().getText();
-    }
 }

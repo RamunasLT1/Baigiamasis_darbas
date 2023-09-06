@@ -47,5 +47,10 @@ public class Locators {
             public static By buttonIssaugoti = By.xpath("//input[@value='Išsaugoti']");
             public static By newQuestionText = By.xpath("//div[@class=\"entryBody\"]");
         }
+
+        public static class DeletePoll {
+            public static By buttonDelete = By.xpath("//a[@class='delete']");
+            public static By afterDelete = By.xpath("/html/body/div[1]/h1");
+        }
     }
 }
