@@ -1,0 +1,11 @@
+name: AutomationTest
+
+tests:
+  - name: apklausalt
+    classes:
+      - lt.ramunas.pom.tests.apklausalt.AtsvaituNesiojimasTest
+      - lt.ramunas.pom.tests.apklausalt.SignInTest
+      - lt.ramunas.pom.tests.apklausalt.CreateNewPollTest
+      - lt.ramunas.pom.tests.apklausalt.EditCreatedPollTest
+      - lt.ramunas.pom.tests.apklausalt.DeletePollTest
+

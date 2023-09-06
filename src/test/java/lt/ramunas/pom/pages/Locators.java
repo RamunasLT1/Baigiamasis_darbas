@@ -52,5 +52,7 @@ public class Locators {
             public static By buttonDelete = By.xpath("//a[@class='delete']");
             public static By afterDelete = By.xpath("/html/body/div[1]/h1");
         }
+
+
     }
 }

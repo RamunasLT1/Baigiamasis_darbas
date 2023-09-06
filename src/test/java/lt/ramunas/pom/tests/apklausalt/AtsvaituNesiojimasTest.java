@@ -36,7 +36,7 @@ public class AtsvaituNesiojimasTest extends BaseTest {
                         expectedResult
                 )
         );
-        System.out.println("Galima įrašyti priežastį kodėl ? " + (isPriezastisKodelActive? "TAIP" : "NE"));
+        System.out.println("Galima įrašyti priežastį kodėl ? " + (isPriezastisKodelActive ? "TAIP" : "NE"));
     }
 
     @Test

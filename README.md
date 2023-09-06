@@ -6,7 +6,7 @@
 
 ### TS1: Sign in to  ["apklausa.lt"](https://apklausa.lt/users/sign_in) test
 
-### TC1.2 Check Sign-In with valid information
+### TC1.1 Check Sign-In with valid information
 * TC1.1.1. Enter valid e-mail.
 * TC1.1.2. Enter valid password.
 * TC1.1.3. Press button 'Prisijungti'.
@@ -37,6 +37,7 @@
 * TC2.1.2. Enter age in age field.
 * TC2.1.3. Click on 'Taip' at main question.
 * TC2.1.4. Check if text field is enabled.
+* TC2.1.5. Click on 'Siųsti Atsakymą'.
   <br></br>
   **<u> Expected result is message: *Dėkojame už atsakymą!* </u>**
   <br></br>
@@ -45,11 +46,10 @@
 * TC2.2.1. Click on 'Vyras' checkBox.
 * TC2.2.2. Enter age in age field.
 * TC2.2.3. Don't click anything on main question.
-* TC2.2.4. Wait for error message to appear.
+* TC2.2.4. Click on 'Siųsti Atsakymą'.
   <br></br>
   **<u> Expected result is error message: *Rastos klaidos* </u>**
   <br></br>
-
 
 ### TS3  New ["Poll creation"](https://apklausa.lt/private/forms/new?) test
 
@@ -88,7 +88,6 @@
 * TC3.4.2. Click on 'Mano anketos'.
 * TC3.4.3. Click on 'Šalinti'.
 * TC3.4.4. Click on 'OK' in alert box.
-
   <br></br>
   **<u> Expected result is: *Poll is deleted* </u>**
   <br></br>

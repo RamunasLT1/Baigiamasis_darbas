@@ -1,15 +1,10 @@
 package lt.ramunas.pom.pages;
 
 import lt.ramunas.pom.utilities.Driver;
-import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 
 public class Common {
 
@@ -39,9 +34,6 @@ public class Common {
         return Driver.getInstance().findElement(locator);
     }
 
-    public static List<WebElement> getElements(By locator) {
-        return Driver.getInstance().findElements(locator);
-    }
 
     public static void sendKeysToElement(By locator, String message) {
         getElement(locator).sendKeys(message);
@@ -55,9 +47,6 @@ public class Common {
         return getElement(locator).getText();
     }
 
-    public static boolean isElementSelected(By locator) {
-        return getElement(locator).isSelected();
-    }
 
     public static boolean isElementEnabled(By locator) {
         return getElement(locator).isEnabled();
@@ -84,17 +73,6 @@ public class Common {
         }
         return false;
     }
-
-    public static String getElementAttributeValue(By locator, String attributeName) {
-        return getElement(locator).getAttribute(attributeName);
-    }
-
-    public static void selectOptionByValue(By locator, String selectValue) {
-        WebElement element = getElement(locator);
-        Select select = new Select(element);
-        select.selectByValue(selectValue);
-    }
-
 
     public static void accpetAlert() {
         getAlert().accept();
