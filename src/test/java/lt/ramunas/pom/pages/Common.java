@@ -66,6 +66,23 @@ public class Common {
     public static boolean isElementVisible(By locator) {
         return getElement(locator).isDisplayed();
     }
+    public static boolean waitForElementToBeVisibleCustomised(By locator, int seconds) {
+
+        for (int i = 1; i <= (seconds); i++) {
+            try {
+                Thread.sleep(500);
+
+                if (isElementVisible(locator)) {
+                    return true;
+                }
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (NoSuchElementException e) {
+            }
+        }
+        return false;
+    }
 
     public static List<Boolean> getSelectedStatusesOfCheckBoxGroup(By locator) {
         List<Boolean> statusList = new ArrayList<>();

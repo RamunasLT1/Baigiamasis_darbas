@@ -1,6 +1,7 @@
-package lt.ramunas.pom.tests;
+package lt.ramunas.pom.tests.apklausalt;
 
 import lt.ramunas.pom.pages.apklausalt.AtsvaituNesiojimasPage;
+import lt.ramunas.pom.tests.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,19 +16,18 @@ public class AtsvaituNesiojimasTest extends BaseTest {
     @Test
     public void testAtsvaituNesiojimasPollPositive() {
         String amzius = "34";
-        boolean isActive;
+        boolean isPriezastisKodelActive;
         String expectedResult = "Dėkojame už atsakymą!";
         String actualResult;
 
         AtsvaituNesiojimasPage.clickOnVyrasCheckBox();
         AtsvaituNesiojimasPage.inputAgeValue(amzius);
         AtsvaituNesiojimasPage.clickOnTaip();
-        AtsvaituNesiojimasPage.isFieldPriezastisActive();
         AtsvaituNesiojimasPage.clickOnSiustiAtsakyma();
-        isActive = AtsvaituNesiojimasPage.isFieldPriezastisActive();
+        isPriezastisKodelActive = AtsvaituNesiojimasPage.isFieldPriezastisActive();
 
         actualResult = AtsvaituNesiojimasPage.readResultMessage();
-        System.out.println("Į laukelį <Jeigu nenešiojate, parašykite trumpą priežastį kodėl' galima rašyti> " + (isActive ? "TAIP" : "NE"));
+
         Assert.assertTrue(
                 actualResult.contains(expectedResult),
                 String.format(
@@ -36,37 +36,25 @@ public class AtsvaituNesiojimasTest extends BaseTest {
                         expectedResult
                 )
         );
+        System.out.println("Galima įrašyti priežastį kodėl ? " + (isPriezastisKodelActive ? "TAIP" : "NE"));
     }
 
     @Test
     public void testAtsvaituNesiojimasPollNegative() {
         String amzius = "34";
-        boolean isActive;
-        String expectedResult = "Rastos klaidos";
-        String actualResult;
-        boolean isErrorMessage;
+        boolean expectedResult = true;
+        boolean actualResult;
 
         AtsvaituNesiojimasPage.clickOnVyrasCheckBox();
         AtsvaituNesiojimasPage.inputAgeValue(amzius);
-        AtsvaituNesiojimasPage.isFieldPriezastisActive();
         AtsvaituNesiojimasPage.clickOnSiustiAtsakyma();
-        AtsvaituNesiojimasPage.isErrorMessagePresent();
+        AtsvaituNesiojimasPage.isErrorBoxPresent();
 
-        isErrorMessage = AtsvaituNesiojimasPage.isErrorMessagePresent();
-        isActive = AtsvaituNesiojimasPage.isFieldPriezastisActive();
+        actualResult = AtsvaituNesiojimasPage.isErrorBoxPresent();
 
-        System.out.println("Į laukelį 'Jeigu nenešiojate, parašykite trumpą priežastį kodėl' galima rašyti'" + (isActive ? "TAIP" : "NE"));
-        System.out.println("Klaidos pranešimas atsiranda ? " + (isErrorMessage ? "TAIP" : "NE"));
-
-        actualResult = AtsvaituNesiojimasPage.readErrorMessage();
-
-        Assert.assertTrue(
-                actualResult.contains(expectedResult),
-                String.format(
-                        "\nActual: %s\nExpected: %s",
-                        actualResult,
-                        expectedResult
-                )
-        );
+        if (actualResult) {
+            AtsvaituNesiojimasPage.readErrorMesage();
+        }
+        Assert.assertEquals(actualResult, expectedResult);
     }
 }

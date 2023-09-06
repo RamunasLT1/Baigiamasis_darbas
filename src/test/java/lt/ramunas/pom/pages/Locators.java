@@ -22,13 +22,21 @@ public class Locators {
             ;
             public static By inputAge = By.xpath("(//input[@type='text'])[1]");
             public static By clickOnTaip = By.xpath("//input[@data-id='5945897']");
-            public static By paragraphGender = By.xpath("//select[@class='options'])[1]");
             public static By readMessage = By.xpath("//h2[@class='notice']");
             public static By isElementActive = By.xpath("(//input[@type='text'])[2]");
             public static By clickOnSiustiAtsakyma = By.xpath("//input[@value='Siųsti atsakymą']");
-            public static By errorMessage = By.xpath("//div[@class='alert answer-errors']");
-
+            public static By errorVisibleAfter = By.xpath("//div[@class='alert answer-errors']");
+            public static By readErrorMessage = By.xpath("//div[@class='alert answer-errors']");
         }
 
+        public static class NewPollCreation {
+
+            public static By writeTitle = By.xpath("//input[@id='form_title']");
+            public static By writeDescription = By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr']");
+            public static By clickOnSukurti = By.xpath("//input[@value='Sukurti']");
+            public static By readMessage = By.xpath("//div[@class='notice']");
+            public static By errorMesage = By.xpath("//p[@class='inline-errors']");
+            public static By manoAnketos = By.xpath("//a[@href='/private/forms']");
+        }
     }
 }

@@ -10,17 +10,11 @@ public class SignInPage {
     }
 
     public static void writeEmail(String email) {
-        Common.sendKeysToElement(
-                Locators.ApklausaLt.SignIn.inputEmail,
-                email
-        );
+        Common.sendKeysToElement(Locators.ApklausaLt.SignIn.inputEmail, email);
     }
 
     public static void writePswd(String password) {
-        Common.sendKeysToElement(
-                Locators.ApklausaLt.SignIn.inputPswd,
-                password
-        );
+        Common.sendKeysToElement(Locators.ApklausaLt.SignIn.inputPswd, password);
 
     }
 

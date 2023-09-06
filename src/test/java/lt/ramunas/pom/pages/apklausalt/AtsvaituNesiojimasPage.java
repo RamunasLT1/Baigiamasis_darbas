@@ -36,11 +36,15 @@ public class AtsvaituNesiojimasPage {
         Common.clickOnElement(Locators.ApklausaLt.AtsvaituNesiojimas.clickOnSiustiAtsakyma);
     }
 
-    public static String readErrorMessage() {
-        return Common.getTextFromElement(Locators.ApklausaLt.AtsvaituNesiojimas.errorMessage);
+
+    public static boolean isErrorBoxPresent() {
+        return Common.waitForElementToBeVisibleCustomised(
+                Locators.ApklausaLt.AtsvaituNesiojimas.errorVisibleAfter,
+                3
+        );
     }
 
-    public static boolean isErrorMessagePresent() {
-        return Common.isElementVisible(Locators.ApklausaLt.AtsvaituNesiojimas.errorMessage);
+    public static void readErrorMesage() {
+        Common.getTextFromElement(Locators.ApklausaLt.AtsvaituNesiojimas.readErrorMessage);
     }
 }
