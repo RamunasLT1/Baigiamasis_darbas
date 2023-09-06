@@ -38,5 +38,14 @@ public class Locators {
             public static By manoAnketos = By.xpath("//a[@href='/private/forms']");
             public static By buttonKurtiNauja = By.xpath("//button[@type='submit']");
         }
+
+        public static class EditCreatedPoll {
+            public static By createdPoll = By.xpath("//h3[@class='title']");
+            public static By klausimai = By.xpath("/html/body/div/ul/li[3]/a");
+            public static By eiluteKlausimuIvedimui = By.xpath("//*[@id=\"add_text\"]/a");
+            public static By newQuestion = By.xpath("//input[@id=\"entry_question\"]");
+            public static By buttonIssaugoti = By.xpath("//input[@value='Išsaugoti']");
+            public static By newQuestionText = By.xpath("//div[@class=\"entryBody\"]");
+        }
     }
 }

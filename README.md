@@ -41,7 +41,7 @@
   **<u> Expected result is: *Message -Dėkojame už atsakymą!-* </u>**
   <br></br>
 
-### TC2.2. Poll negative check - no answer to main question
+### TC2.2. Poll negative check: no answer to main question
 * TC2.2.1. Click on 'Vyras' checkBox.
 * TC2.2.2. Enter age in age field.
 * TC2.2.3. Don't click anything on main question.
@@ -62,15 +62,28 @@
   **<u> Expected result is: *Anketa sukurta* </u>**
   <br></br>
 
-### TC3.2 Poll creation negtive test
+### TC3.2 Poll creation negtive test: no title
 * TC3.2.1. Sign In.
 * TC3.2.2. Click on 'Mano anketos'.
-* TC3.2.3. Click on 'Kurti naują anketą'.
-* TC4.2.3. Leave poll name field empty
-* TC4.2.4. Click on 'Sukurti'
+* TC3.2.4. Click on 'Kurti naują anketą'.
+* TC3.2.5. Leave poll name field empty
+* TC3.2.6. Click on 'Sukurti'
   <br></br>
   **<u> Expected result is: *Error message -Negali būti tuščias-* </u>**
   <br></br>
+
+### TC4.3 Poll creation edit test
+* TC4.2.1. Sign In.
+* TC4.2.2. Click on 'Mano anketos'.
+* TC4.2.3. Click on 'Klausimai'.
+* TC4.2.4. Click on 'EiluteTekstoIvedimui'.
+* TC4.2.5. Write new question.
+* TC4.2.5. Click on 'Išsaugoti'
+  <br></br>
+  **<u> Expected result is: *-New question appears in poll-* </u>**
+  <br></br>
+
+
   
 
   
