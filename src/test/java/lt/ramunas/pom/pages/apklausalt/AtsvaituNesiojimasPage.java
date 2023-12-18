@@ -5,7 +5,7 @@ import lt.ramunas.pom.pages.Locators;
 
 public class AtsvaituNesiojimasPage {
     public static void open() {
-        Common.setUpChromeDriver();
+        Common.setUpEdgeDriver();
         Common.openUrl("https://apklausa.lt/f/atsvaitu-nesiojimas-4dzmdag/answers/new.html");
     }
 

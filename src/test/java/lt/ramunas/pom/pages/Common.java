@@ -9,8 +9,8 @@ import org.openqa.selenium.WebElement;
 public class Common {
 
 
-    public static void setUpChromeDriver() {
-        Driver.setChrome();
+    public static void setUpEdgeDriver() {
+        Driver.setEdge();
     }
 
     public static void openUrl(String url) {

@@ -12,8 +12,8 @@ public class Locators {
             public static By inputEmail = By.xpath("(//input[@id='user_email'])[1]");
             public static By inputPswd = By.xpath("(//input[@id='user_password'])[1]");
             public static By buttonPrisijungti = By.xpath("//input[@value='Prisijungti']");
-            public static By readSignInMessage = By.xpath("//div[@class='notice']");
-            public static By readErrorMessage = By.xpath("//div[@class='messages']");
+            public static By SignInMessage = By.xpath("//div[@class='notice']");
+            public static By ErrorMessage = By.xpath("//div[@class='messages']");
         }
 
         public static class AtsvaituNesiojimas {

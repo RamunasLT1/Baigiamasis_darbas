@@ -1,7 +1,5 @@
 package lt.ramunas.pom.tests.apklausalt;
 
-import lt.ramunas.pom.pages.Common;
-import lt.ramunas.pom.pages.Locators;
 import lt.ramunas.pom.pages.apklausalt.SignInPage;
 import lt.ramunas.pom.tests.BaseTest;
 import org.testng.Assert;
@@ -27,7 +25,7 @@ public class SignInTest extends BaseTest {
         SignInPage.writePswd(password);
         SignInPage.clickOnButtonPrisijungti();
 
-        actualResult = Common.getTextFromElement(Locators.ApklausaLt.SignIn.readSignInMessage);
+        actualResult = SignInPage.readSignInMessage();
 
         Assert.assertEquals(actualResult, expectedResult);
     }
@@ -43,7 +41,7 @@ public class SignInTest extends BaseTest {
         SignInPage.writePswd(password);
         SignInPage.clickOnButtonPrisijungti();
 
-        actualResult = Common.getTextFromElement(Locators.ApklausaLt.SignIn.readErrorMessage);
+        actualResult = SignInPage.readErrorMessage();
 
         Assert.assertEquals(actualResult, expectedResult);
     }
@@ -59,7 +57,7 @@ public class SignInTest extends BaseTest {
         SignInPage.writePswd(password);
         SignInPage.clickOnButtonPrisijungti();
 
-        actualResult = Common.getTextFromElement(Locators.ApklausaLt.SignIn.readErrorMessage);
+        actualResult = SignInPage.readErrorMessage();
 
         Assert.assertEquals(actualResult, expectedResult);
     }
